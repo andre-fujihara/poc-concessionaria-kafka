@@ -1,0 +1,5 @@
+br\com\zup\poc\controller\VendasControllerUnitTest.class
+br\com\zup\poc\PocVendaCarrosApplicationTests.class
+br\com\zup\poc\controller\CarroControllerUnitTest.class
+br\com\zup\poc\controller\VendedorControllerUnitTest.class
+br\com\zup\poc\service\KafkaServiceUnitTest.class

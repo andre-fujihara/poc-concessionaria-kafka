@@ -21,6 +21,7 @@
 
 # Target
 target/
+bin/
 
 #settings
 .project

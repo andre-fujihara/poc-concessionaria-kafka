@@ -1,6 +1,7 @@
 package br.com.zup.poc.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -87,14 +88,14 @@ public class VendasController {
 					"O vendedor não foi informado");
 		}
 
-		if(this.carroRepository.findById(venda.getCarro().getId()).isEmpty()) {
+		if(!this.carroRepository.findById(venda.getCarro().getId()).isPresent()) {
 			throw new IllegalArgumentException(
 					"O carro informado não foi encontrado com id -> " + 
 					venda.getCarro().getId());
 		}
 		
-		if(this.vendedorRepository.findById(venda.getVendedor().getId()).isEmpty()) {
-			throw new IllegalArgumentException(
+		if(!this.vendedorRepository.findById(venda.getVendedor().getId()).isPresent()) {
+				throw new IllegalArgumentException(
 					"O vendedor informado não foi encontrado com id -> " + 
 					venda.getVendedor().getId());
 		}

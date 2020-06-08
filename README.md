@@ -7,8 +7,8 @@ Zookeeper
 - url de acesso do zookeeper: localhost:2181
 
 Brokers:
-Utilizei as portas dos brokers abaixo, tem que configurar pelo menos um
-- url dos brokers: localhost:9092,localhost:9093,localhost:9094
+Subir um servidor local com os dados
+- url dos brokers: localhost:9092
 
 ## Clonar o projeto:
 git clone https://github.com/ndrfjhr-zup/poc-concessionaria-kafka.git 

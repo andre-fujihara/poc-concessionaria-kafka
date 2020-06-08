@@ -34,8 +34,8 @@ public class KafkaService {
 	ObjectMapper objectMapper;
 	
 	@KafkaListener(topics = "${spring.kafka.template.default-topic}")
-	public void onMessageNew(ConsumerRecord<Integer,String> consumerRecord) throws JsonProcessingException {
-		log.info("Consumer msg NEW -> {} ", consumerRecord );
+	public void onMessage(ConsumerRecord<Integer,String> consumerRecord) throws JsonProcessingException {
+		log.info("onMessage -> {} ", consumerRecord );
 		Venda venda = objectMapper.readValue(consumerRecord.value(), Venda.class);
 		vendasController.validate(venda);
 		vendaRepository.save(venda);

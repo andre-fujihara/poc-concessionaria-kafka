@@ -72,6 +72,11 @@ public class VendasController {
 	
 
 	public void validate(Venda venda) {
+		if(venda==null){
+			throw new IllegalArgumentException(
+					"A venda não foi informada");
+		}
+		
 		if(venda.getCarro()==null || venda.getCarro().getId() ==null){
 			throw new IllegalArgumentException(
 					"O carro não foi informado");

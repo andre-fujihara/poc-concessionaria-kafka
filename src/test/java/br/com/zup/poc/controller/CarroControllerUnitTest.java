@@ -48,7 +48,6 @@ public class CarroControllerUnitTest {
 
         String json = objectMapper.writeValueAsString(carro);
 
-        //expect
         mockMvc.perform(post("/v0/carro")
         .content(json)
         .contentType(MediaType.APPLICATION_JSON))
@@ -61,7 +60,6 @@ public class CarroControllerUnitTest {
     	
         String json = objectMapper.writeValueAsString(null);
 
-        //expect
         mockMvc.perform(post("/v0/carro")
         .content(json)
         .contentType(MediaType.APPLICATION_JSON))

@@ -1,8 +1,14 @@
 version: "3.8"
 services:
-  venda-carros:
+  carro:
     build:
-      context: ./
-    image: venda-carros
+      context: ./carro
+    image: carro
     ports:
-      - 8080:8080
+      - 8081:8081
+  vendedor:
+    build:
+      context: ./vendedor
+    image: vendedor
+    ports:
+      - 8082:8082
